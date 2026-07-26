@@ -1,9 +1,243 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My GitHub Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Wedding | October 24, 2026</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Color Palette & CSS Variables */
+        :root {
+            --bg-burgundy: #5A0016;
+            --text-cream: #FAF0E6;
+            --accent-gold: #D4AF37;
+            --overlay-dark: rgba(0, 0, 0, 0.25);
+        }
+
+        /* Reset & Global Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-burgundy);
+            color: var(--text-cream);
+            font-family: 'Lora', serif;
+            line-height: 1.6;
+            text-align: center;
+            padding: 20px 15px;
+        }
+
+        /* Layout Container */
+        .container {
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 20px 10px;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+            color: var(--text-cream);
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        p {
+            font-size: 1.05rem;
+            margin-bottom: 15px;
+        }
+
+        /* Divider Accent */
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--accent-gold), transparent);
+            margin: 35px auto;
+            width: 70%;
+        }
+
+        /* Verse / Quote Section */
+        .verse {
+            font-style: italic;
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin: 20px 0;
+        }
+
+        /* Countdown Container */
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin: 25px 0;
+        }
+
+        .time-box {
+            background-color: var(--overlay-dark);
+            border: 1px solid var(--accent-gold);
+            border-radius: 6px;
+            padding: 10px 12px;
+            min-width: 65px;
+        }
+
+        .time-box .number {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-gold);
+            display: block;
+        }
+
+        .time-box .label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.8;
+        }
+
+        /* Call to Action / RSVP Button */
+        .btn-rsvp {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--accent-gold);
+            border: 2px solid var(--accent-gold);
+            padding: 12px 35px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            text-decoration: none;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            margin-top: 15px;
+        }
+
+        .btn-rsvp:hover {
+            background-color: var(--accent-gold);
+            color: var(--bg-burgundy);
+            cursor: pointer;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 480px) {
+            h1 { font-size: 2.1rem; }
+            h2 { font-size: 1.3rem; }
+            .time-box { min-width: 55px; padding: 8px 8px; }
+            .time-box .number { font-size: 1.25rem; }
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
+
+    <div class="container">
+        
+        <!-- Header / Names -->
+        <header>
+            <p style="text-transform: uppercase; letter-spacing: 3px; font-size: 0.85rem; color: var(--accent-gold);">We Are Getting Married</p>
+            <h1 style="margin-top: 10px;">[ Groom Name ] & [ Bride Name ]</h1>
+            <p style="font-size: 1.2rem; color: var(--accent-gold);">October 24, 2026</p>
+        </header>
+
+        <div class="divider"></div>
+
+        <!-- Scripture / Quote Section -->
+        <section class="verse">
+            <p>"Above all, clothe yourselves with love, which binds us all together in perfect harmony."</p>
+            <p style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent-gold);">- Colossians 3:14</p>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Countdown Timer -->
+        <section>
+            <h2>Counting Down</h2>
+            <div class="countdown-container">
+                <div class="time-box">
+                    <span class="number" id="days">00</span>
+                    <span class="label">Days</span>
+                </div>
+                <div class="time-box">
+                    <span class="number" id="hours">00</span>
+                    <span class="label">Hours</span>
+                </div>
+                <div class="time-box">
+                    <span class="number" id="minutes">00</span>
+                    <span class="label">Mins</span>
+                </div>
+                <div class="time-box">
+                    <span class="number" id="seconds">00</span>
+                    <span class="label">Secs</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Event Details -->
+        <section>
+            <h2>The Celebration</h2>
+            <p><strong>Time:</strong> 6:00 PM</p>
+            <p><strong>Location:</strong> [ Venue Name ]</p>
+            <p>[ Venue Address Street, City, State ]</p>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- RSVP Section -->
+        <section style="margin-bottom: 30px;">
+            <h2>RSVP</h2>
+            <p>Please let us know if you will be joining us on our special day.</p>
+            <!-- Replace # with your Google Form URL -->
+            <a href="#" target="_blank" class="btn-rsvp">RSVP Here</a>
+        </section>
+
+    </div>
+
+    <!-- Countdown Timer Script -->
+    <script>
+        const targetDate = new Date("October 24, 2026 18:00:00").getTime();
+
+        const updateCountdown = () => {
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            if (difference > 0) {
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                document.getElementById("days").innerText = days < 10 ? '0' + days : days;
+                document.getElementById("hours").innerText = hours < 10 ? '0' + hours : hours;
+                document.getElementById("minutes").innerText = minutes < 10 ? '0' + minutes : minutes;
+                document.getElementById("seconds").innerText = seconds < 10 ? '0' + seconds : seconds;
+            } else {
+                document.querySelector(".countdown-container").innerHTML = "<p style='color: var(--accent-gold); font-size: 1.2rem;'>Today is the day!</p>";
+            }
+        };
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
 </body>
 </html>
