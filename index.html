@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Boda de Joel y Lirio</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/logo.png">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,10 +36,30 @@
             overflow-x: hidden;
         }
 
+        /* Sticky Top Header Bar */
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--bg-burgundy);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .sticky-header img.logo {
+            height: 42px;
+            width: auto;
+            display: block;
+        }
+
         /* Section Styling */
         .section {
             position: relative;
-            padding: 60px 20px;
+            padding: 50px 20px;
             width: 100%;
         }
 
@@ -93,7 +116,7 @@
             margin-bottom: 20px;
         }
 
-        /* Names over Photo: Cream text with dark drop shadow for high contrast */
+        /* Names over Photo */
         h1.names {
             font-family: 'Playfair Display', serif;
             font-size: 3.8rem;
@@ -121,7 +144,7 @@
             margin-bottom: 10px;
         }
 
-        /* Scripture Box: Added text shadows for legibility */
+        /* Scripture Box */
         .verse-box {
             max-width: 600px;
             margin: 0 auto;
@@ -142,14 +165,14 @@
             font-weight: 600;
         }
 
-        /* Countdown Grid: Fits tightly between gold side borders */
+        /* Countdown Grid */
         .countdown-container {
             display: flex;
             justify-content: center;
             gap: 6px;
             margin: 25px auto 35px auto;
-            flex-wrap: nowrap; /* Forces all 4 boxes onto 1 row */
-            max-width: 72%; /* Keeps cards away from gold borders */
+            flex-wrap: nowrap;
+            max-width: 72%;
         }
 
         .time-card {
@@ -157,7 +180,7 @@
             color: var(--card-text);
             border-radius: 8px;
             padding: 8px 4px;
-            flex: 1; /* Makes all 4 cards equal width */
+            flex: 1;
             max-width: 68px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
@@ -203,18 +226,23 @@
         /* Mobile Adjustments */
         @media (max-width: 600px) {
             h1.names { font-size: 2.8rem; }
-            .section { padding: 45px 15px; }
+            .section { padding: 40px 15px; }
             .section-burgundy {
                 padding-left: 12%;
                 padding-right: 12%;
             }
             .countdown-container {
-                max-width: 100%; /* Relies on parent section padding */
+                max-width: 100%;
             }
         }
     </style>
 </head>
 <body>
+
+    <!-- Sticky Header Bar -->
+    <header class="sticky-header">
+        <img src="images/logo.png" class="logo" alt="J y L Logo">
+    </header>
 
     <!-- Section 1: Invitation Header -->
     <section class="section section-burgundy">
