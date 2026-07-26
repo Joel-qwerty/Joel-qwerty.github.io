@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Wedding | October 24, 2026</title>
+    <title>Nuestra Boda | 24 de Octubre de 2026</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,7 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
 
     <style>
-        /* Color Palette & CSS Variables */
         :root {
             --bg-burgundy: #5A0016;
             --text-cream: #FAF0E6;
@@ -19,7 +18,6 @@
             --overlay-dark: rgba(0, 0, 0, 0.25);
         }
 
-        /* Reset & Global Styles */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -30,19 +28,17 @@
             background-color: var(--bg-burgundy);
             color: var(--text-cream);
             font-family: 'Lora', serif;
-            line-height: 1.6;
+            line-height: 1.7;
             text-align: center;
-            padding: 20px 15px;
+            padding: 30px 15px;
         }
 
-        /* Layout Container */
         .container {
             max-width: 650px;
             margin: 0 auto;
-            padding: 20px 10px;
+            padding: 10px;
         }
 
-        /* Typography */
         h1, h2, h3 {
             font-family: 'Playfair Display', serif;
             font-weight: 700;
@@ -50,13 +46,13 @@
         }
 
         h1 {
-            font-size: 2.5rem;
-            margin-bottom: 5px;
+            font-size: 2.6rem;
+            margin: 10px 0;
             color: var(--text-cream);
         }
 
         h2 {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             color: var(--accent-gold);
             margin-bottom: 15px;
             text-transform: uppercase;
@@ -65,26 +61,24 @@
 
         p {
             font-size: 1.05rem;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
-        /* Divider Accent */
         .divider {
             height: 1px;
             background: linear-gradient(to right, transparent, var(--accent-gold), transparent);
             margin: 35px auto;
-            width: 70%;
+            width: 75%;
         }
 
-        /* Verse / Quote Section */
         .verse {
             font-style: italic;
             font-size: 0.95rem;
-            opacity: 0.9;
-            margin: 20px 0;
+            opacity: 0.95;
+            padding: 0 10px;
         }
 
-        /* Countdown Container */
+        /* Countdown */
         .countdown-container {
             display: flex;
             justify-content: center;
@@ -97,12 +91,12 @@
             border: 1px solid var(--accent-gold);
             border-radius: 6px;
             padding: 10px 12px;
-            min-width: 65px;
+            min-width: 70px;
         }
 
         .time-box .number {
             font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             font-weight: 700;
             color: var(--accent-gold);
             display: block;
@@ -112,20 +106,20 @@
             font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            opacity: 0.8;
+            opacity: 0.85;
         }
 
-        /* Call to Action / RSVP Button */
+        /* RSVP Button */
         .btn-rsvp {
             display: inline-block;
             background-color: transparent;
             color: var(--accent-gold);
             border: 2px solid var(--accent-gold);
-            padding: 12px 35px;
+            padding: 14px 40px;
             font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             text-decoration: none;
-            letter-spacing: 1.5px;
+            letter-spacing: 2px;
             text-transform: uppercase;
             border-radius: 4px;
             transition: all 0.3s ease;
@@ -138,12 +132,11 @@
             cursor: pointer;
         }
 
-        /* Mobile Adjustments */
         @media (max-width: 480px) {
-            h1 { font-size: 2.1rem; }
+            h1 { font-size: 2.2rem; }
             h2 { font-size: 1.3rem; }
-            .time-box { min-width: 55px; padding: 8px 8px; }
-            .time-box .number { font-size: 1.25rem; }
+            .time-box { min-width: 60px; padding: 8px; }
+            .time-box .number { font-size: 1.3rem; }
         }
     </style>
 </head>
@@ -151,69 +144,68 @@
 
     <div class="container">
         
-        <!-- Header / Names -->
+        <!-- Header -->
         <header>
-            <p style="text-transform: uppercase; letter-spacing: 3px; font-size: 0.85rem; color: var(--accent-gold);">We Are Getting Married</p>
-            <h1 style="margin-top: 10px;">[ Groom Name ] & [ Bride Name ]</h1>
-            <p style="font-size: 1.2rem; color: var(--accent-gold);">October 24, 2026</p>
+            <p style="text-transform: uppercase; letter-spacing: 3px; font-size: 0.85rem; color: var(--accent-gold);">Nos Casamos</p>
+            <h1>[ Nombre del Novio ] & [ Nombre de la Novia ]</h1>
+            <p style="font-size: 1.2rem; color: var(--accent-gold); font-family: 'Playfair Display', serif;">24 de Octubre de 2026</p>
         </header>
 
         <div class="divider"></div>
 
-        <!-- Scripture / Quote Section -->
+        <!-- Versículo -->
         <section class="verse">
-            <p>"Above all, clothe yourselves with love, which binds us all together in perfect harmony."</p>
-            <p style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent-gold);">- Colossians 3:14</p>
+            <p>"Y sobre todas estas cosas vestíos de amor, que es el vínculo perfecto."</p>
+            <p style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent-gold); margin-top: 5px;">- Colosenses 3:14</p>
         </section>
 
         <div class="divider"></div>
 
-        <!-- Countdown Timer -->
+        <!-- Cuenta Regresiva -->
         <section>
-            <h2>Counting Down</h2>
+            <h2>Cuenta Regresiva</h2>
             <div class="countdown-container">
                 <div class="time-box">
                     <span class="number" id="days">00</span>
-                    <span class="label">Days</span>
+                    <span class="label">Días</span>
                 </div>
                 <div class="time-box">
                     <span class="number" id="hours">00</span>
-                    <span class="label">Hours</span>
+                    <span class="label">Horas</span>
                 </div>
                 <div class="time-box">
                     <span class="number" id="minutes">00</span>
-                    <span class="label">Mins</span>
+                    <span class="label">Min</span>
                 </div>
                 <div class="time-box">
                     <span class="number" id="seconds">00</span>
-                    <span class="label">Secs</span>
+                    <span class="label">Seg</span>
                 </div>
             </div>
         </section>
 
         <div class="divider"></div>
 
-        <!-- Event Details -->
+        <!-- Detalles -->
         <section>
-            <h2>The Celebration</h2>
-            <p><strong>Time:</strong> 6:00 PM</p>
-            <p><strong>Location:</strong> [ Venue Name ]</p>
-            <p>[ Venue Address Street, City, State ]</p>
+            <h2>Detalles del Evento</h2>
+            <p><strong>Hora:</strong> 6:00 PM</p>
+            <p><strong>Lugar:</strong> [ Nombre del Lugar ]</p>
+            <p>[ Dirección Completa del Lugar ]</p>
         </section>
 
         <div class="divider"></div>
 
-        <!-- RSVP Section -->
-        <section style="margin-bottom: 30px;">
-            <h2>RSVP</h2>
-            <p>Please let us know if you will be joining us on our special day.</p>
-            <!-- Replace # with your Google Form URL -->
-            <a href="#" target="_blank" class="btn-rsvp">RSVP Here</a>
+        <!-- RSVP -->
+        <section style="margin-bottom: 20px;">
+            <h2>Confirmación de Asistencia</h2>
+            <p>Agradecemos confirmar tu asistencia antes del [ Fecha límite ].</p>
+            <a href="LINK_DE_TU_GOOGLE_FORM" target="_blank" class="btn-rsvp">Confirmar Asistencia (RSVP)</a>
         </section>
 
     </div>
 
-    <!-- Countdown Timer Script -->
+    <!-- Script de Cuenta Regresiva -->
     <script>
         const targetDate = new Date("October 24, 2026 18:00:00").getTime();
 
@@ -232,7 +224,7 @@
                 document.getElementById("minutes").innerText = minutes < 10 ? '0' + minutes : minutes;
                 document.getElementById("seconds").innerText = seconds < 10 ? '0' + seconds : seconds;
             } else {
-                document.querySelector(".countdown-container").innerHTML = "<p style='color: var(--accent-gold); font-size: 1.2rem;'>Today is the day!</p>";
+                document.querySelector(".countdown-container").innerHTML = "<p style='color: var(--accent-gold); font-size: 1.2rem;'>¡Hoy es el gran día!</p>";
             }
         };
 
