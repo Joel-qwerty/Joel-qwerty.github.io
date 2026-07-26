@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuestra Boda | 24 de Octubre de 2026</title>
+    <title>La Boda de Joel y Lirio</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
     <style>
         :root {
             --bg-burgundy: #5A0016;
             --text-cream: #FAF0E6;
             --accent-gold: #D4AF37;
-            --overlay-dark: rgba(0, 0, 0, 0.25);
+            --card-bg: #FFFFFF;
+            --card-text: #5A0016;
         }
 
         * {
@@ -27,185 +28,253 @@
         body {
             background-color: var(--bg-burgundy);
             color: var(--text-cream);
-            font-family: 'Lora', serif;
-            line-height: 1.7;
-            text-align: center;
-            padding: 30px 15px;
-        }
-
-        .container {
-            max-width: 650px;
-            margin: 0 auto;
-            padding: 10px;
-        }
-
-        h1, h2, h3 {
             font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            letter-spacing: 1px;
+            text-align: center;
+            overflow-x: hidden;
         }
 
-        h1 {
-            font-size: 2.6rem;
-            margin: 10px 0;
+        /* Section Styling */
+        .section {
+            position: relative;
+            padding: 60px 20px;
+            width: 100%;
+        }
+
+        .section-burgundy {
+            background-color: var(--bg-burgundy);
             color: var(--text-cream);
         }
 
-        h2 {
-            font-size: 1.5rem;
-            color: var(--accent-gold);
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+        /* Hero Photo Section & Verse Background */
+        .section-photo {
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                        url('images/hero-bg.jpg') center/cover no-repeat;
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
         }
 
-        p {
-            font-size: 1.05rem;
-            margin-bottom: 12px;
+        .section-photo-verse {
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
+                        url('images/couple-bg.jpg') center/cover no-repeat;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
         }
 
-        .divider {
-            height: 1px;
-            background: linear-gradient(to right, transparent, var(--accent-gold), transparent);
-            margin: 35px auto;
-            width: 75%;
+        /* Decorative Corner Flourishes */
+        .corner-flourish {
+            position: absolute;
+            width: 120px;
+            height: auto;
+            pointer-events: none;
+            opacity: 0.85;
         }
+        .top-left { top: 10px; left: 10px; }
+        .top-right { top: 10px; right: 10px; }
+        .bottom-left { bottom: 10px; left: 10px; }
+        .bottom-right { bottom: 10px; right: 10px; }
 
-        .verse {
+        /* Typography */
+        p.sub-title {
+            font-family: 'Playfair Display', serif;
             font-style: italic;
-            font-size: 0.95rem;
-            opacity: 0.95;
-            padding: 0 10px;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            opacity: 0.9;
         }
 
-        /* Countdown */
+        h2.header-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        h1.names {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.8rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            line-height: 1.1;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .ampersand {
+            font-style: italic;
+            font-size: 2rem;
+            margin: 10px 0;
+            font-family: 'Playfair Display', serif;
+            text-transform: lowercase;
+        }
+
+        .date-header {
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        /* Scripture Box */
+        .verse-box {
+            max-width: 600px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+        }
+
+        .verse-box p.text {
+            font-size: 1.25rem;
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .verse-box p.reference {
+            font-size: 1rem;
+            text-align: right;
+            font-weight: 600;
+        }
+
+        /* Countdown Grid */
         .countdown-container {
             display: flex;
             justify-content: center;
-            gap: 12px;
-            margin: 25px 0;
+            gap: 15px;
+            margin: 25px 0 35px 0;
+            flex-wrap: wrap;
         }
 
-        .time-box {
-            background-color: var(--overlay-dark);
-            border: 1px solid var(--accent-gold);
-            border-radius: 6px;
-            padding: 10px 12px;
-            min-width: 70px;
+        .time-card {
+            background-color: var(--card-bg);
+            color: var(--card-text);
+            border-radius: 8px;
+            padding: 12px 16px;
+            min-width: 75px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
 
-        .time-box .number {
+        .time-card .number {
             font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
+            font-size: 2.2rem;
             font-weight: 700;
-            color: var(--accent-gold);
             display: block;
+            line-height: 1;
         }
 
-        .time-box .label {
-            font-size: 0.75rem;
+        .time-card .label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            opacity: 0.85;
+            margin-top: 6px;
+            display: block;
+            color: #444;
         }
 
-        /* RSVP Button */
+        /* Button Styling */
         .btn-rsvp {
             display: inline-block;
-            background-color: transparent;
-            color: var(--accent-gold);
-            border: 2px solid var(--accent-gold);
-            padding: 14px 40px;
+            background-color: var(--card-bg);
+            color: var(--card-text);
+            padding: 12px 30px;
             font-family: 'Playfair Display', serif;
-            font-size: 1.05rem;
+            font-size: 1.1rem;
+            font-style: italic;
             text-decoration: none;
-            letter-spacing: 2px;
-            text-transform: uppercase;
             border-radius: 4px;
-            transition: all 0.3s ease;
-            margin-top: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+            transition: transform 0.2s ease, background-color 0.2s ease;
         }
 
         .btn-rsvp:hover {
-            background-color: var(--accent-gold);
-            color: var(--bg-burgundy);
-            cursor: pointer;
+            transform: translateY(-2px);
+            background-color: #f7f7f7;
         }
 
-        @media (max-width: 480px) {
-            h1 { font-size: 2.2rem; }
-            h2 { font-size: 1.3rem; }
-            .time-box { min-width: 60px; padding: 8px; }
-            .time-box .number { font-size: 1.3rem; }
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            h1.names { font-size: 2.8rem; }
+            .corner-flourish { width: 80px; }
+            .time-card { min-width: 65px; padding: 10px 10px; }
+            .time-card .number { font-size: 1.75rem; }
+            .section { padding: 45px 15px; }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
+    <!-- Section 1: Invitation Header -->
+    <section class="section section-burgundy">
+        <!-- Optional SVG/Image corner accents -->
+        <!-- <img src="corner-flourish.png" class="corner-flourish top-left" alt=""> -->
+        <!-- <img src="corner-flourish.png" class="corner-flourish top-right" alt=""> -->
         
-        <!-- Header -->
-        <header>
-            <p style="text-transform: uppercase; letter-spacing: 3px; font-size: 0.85rem; color: var(--accent-gold);">Nos Casamos</p>
-            <h1>[ Nombre del Novio ] & [ Nombre de la Novia ]</h1>
-            <p style="font-size: 1.2rem; color: var(--accent-gold); font-family: 'Playfair Display', serif;">24 de Octubre de 2026</p>
-        </header>
+        <p class="sub-title">Juntos con nuestras familias<br>tenemos el honor de invitarle a</p>
+        <h2 class="header-title">LA BODA DE</h2>
+    </section>
 
-        <div class="divider"></div>
+    <!-- Section 2: Names over Hero Photo -->
+    <section class="section-photo">
+        <h1 class="names">JOEL</h1>
+        <div class="ampersand">y</div>
+        <h1 class="names">LIRIO</h1>
+    </section>
 
-        <!-- Versículo -->
-        <section class="verse">
-            <p>"Y sobre todas estas cosas vestíos de amor, que es el vínculo perfecto."</p>
-            <p style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent-gold); margin-top: 5px;">- Colosenses 3:14</p>
-        </section>
+    <!-- Section 3: Date, Countdown & RSVP -->
+    <section class="section section-burgundy">
+        <p class="date-header">10.24.2026</p>
+        <p class="sub-title">Ya casi...</p>
 
-        <div class="divider"></div>
-
-        <!-- Cuenta Regresiva -->
-        <section>
-            <h2>Cuenta Regresiva</h2>
-            <div class="countdown-container">
-                <div class="time-box">
-                    <span class="number" id="days">00</span>
-                    <span class="label">Días</span>
-                </div>
-                <div class="time-box">
-                    <span class="number" id="hours">00</span>
-                    <span class="label">Horas</span>
-                </div>
-                <div class="time-box">
-                    <span class="number" id="minutes">00</span>
-                    <span class="label">Min</span>
-                </div>
-                <div class="time-box">
-                    <span class="number" id="seconds">00</span>
-                    <span class="label">Seg</span>
-                </div>
+        <!-- Countdown -->
+        <div class="countdown-container">
+            <div class="time-card">
+                <span class="number" id="days">00</span>
+                <span class="label">Días</span>
             </div>
-        </section>
+            <div class="time-card">
+                <span class="number" id="hours">00</span>
+                <span class="label">Horas</span>
+            </div>
+            <div class="time-card">
+                <span class="number" id="minutes">00</span>
+                <span class="label">Minutos</span>
+            </div>
+            <div class="time-card">
+                <span class="number" id="seconds">00</span>
+                <span class="label">Segundos</span>
+            </div>
+        </div>
 
-        <div class="divider"></div>
+        <a href="YOUR_GOOGLE_FORM_LINK" target="_blank" class="btn-rsvp">Confirmar Asistencia</a>
+    </section>
 
-        <!-- Detalles -->
-        <section>
-            <h2>Detalles del Evento</h2>
-            <p><strong>Hora:</strong> 6:00 PM</p>
-            <p><strong>Lugar:</strong> [ Nombre del Lugar ]</p>
-            <p>[ Dirección Completa del Lugar ]</p>
-        </section>
+    <!-- Section 4: Bible Verse over Couple Photo -->
+    <section class="section-photo-verse">
+        <div class="verse-box">
+            <p class="text">"Así que no son ya más dos, sino una sola carne; por tanto, lo que Dios juntó, no lo separe el hombre."</p>
+            <p class="reference">Mateo 19:6</p>
+        </div>
+    </section>
 
-        <div class="divider"></div>
+    <!-- Section 5: Venue Details -->
+    <section class="section section-burgundy">
+        <h2 class="header-title" style="font-size: 1.8rem;">Dónde y Cuándo</h2>
+        
+        <p style="font-size: 1.1rem; margin-bottom: 8px;">Tiempo TBD</p>
+        <p style="font-size: 1.25rem; font-weight: 600; margin-bottom: 4px;">Lirios del Valle</p>
+        <p style="font-size: 1.1rem;">Ejido Chiapas 1</p>
+    </section>
 
-        <!-- RSVP -->
-        <section style="margin-bottom: 20px;">
-            <h2>Confirmación de Asistencia</h2>
-            <p>Agradecemos confirmar tu asistencia antes del [ Fecha límite ].</p>
-            <a href="LINK_DE_TU_GOOGLE_FORM" target="_blank" class="btn-rsvp">Confirmar Asistencia (RSVP)</a>
-        </section>
-
-    </div>
-
-    <!-- Script de Cuenta Regresiva -->
+    <!-- Countdown Script -->
     <script>
         const targetDate = new Date("October 24, 2026 18:00:00").getTime();
 
@@ -224,7 +293,7 @@
                 document.getElementById("minutes").innerText = minutes < 10 ? '0' + minutes : minutes;
                 document.getElementById("seconds").innerText = seconds < 10 ? '0' + seconds : seconds;
             } else {
-                document.querySelector(".countdown-container").innerHTML = "<p style='color: var(--accent-gold); font-size: 1.2rem;'>¡Hoy es el gran día!</p>";
+                document.querySelector(".countdown-container").innerHTML = "<p style='font-size: 1.3rem;'>¡Hoy es el gran día!</p>";
             }
         };
 
