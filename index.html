@@ -58,7 +58,7 @@
 
         /* Adjust top section spacing below sticky header */
         .section-burgundy:first-of-type {
-            padding-top: 75px;
+            padding-top: 70px;
         }
         
         /* Section Styling */
@@ -82,10 +82,11 @@
         .section-countdown {
             background-color: var(--bg-burgundy);
             background-image: url('images/bg-3.png');
-            background-position: center top;
-            background-size: cover;
+            background-position: center center;
+            background-size: contain;
             background-repeat: no-repeat;
             color: var(--text-cream);
+            padding: 70px 20px; /* Gives the wreath room to breathe */
         }
 
         /* Hero Photo Section */
@@ -154,9 +155,13 @@
         }
 
         .date-header {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             letter-spacing: 2px;
-            margin-bottom: 10px;
+            color: var(--accent-gold); /* Gold stands out much better */
+            text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.8);
+            margin-top: 15px; /* Pushes date inside the clear circle opening */
+            margin-bottom: 5px;
+            font-weight: 600;
         }
 
         /* Scripture Box */
