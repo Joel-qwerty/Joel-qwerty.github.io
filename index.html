@@ -78,6 +78,16 @@
             color: var(--text-cream);
         }
 
+        /* Unique Background for Countdown Section */
+        .section-countdown {
+            background-color: var(--bg-burgundy);
+            background-image: url('images/bg-3.png');
+            background-position: center top;
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: var(--text-cream);
+        }
+
         /* Hero Photo Section */
         .section-photo {
             position: relative;
@@ -263,7 +273,7 @@
     </section>
 
     <!-- Section 3: Date, Countdown & RSVP -->
-    <section class="section section-burgundy">
+    <section class="section section-countdown">
         <p class="date-header">10.24.2026</p>
         <p class="sub-title">Ya casi...</p>
 
@@ -299,13 +309,16 @@
     </section>
 
     <!-- Section 5: Venue Details -->
-    <section class="section section-burgundy">
-        <h2 class="header-title" style="font-size: 1.8rem;">Dónde y Cuándo</h2>
-        
-        <p style="font-size: 1.1rem; margin-bottom: 8px;">Tiempo TBD</p>
-        <p style="font-size: 1.25rem; font-weight: 600; margin-bottom: 4px;">Lirios del Valle</p>
-        <p style="font-size: 1.1rem;">Ejido Chiapas 1</p>
-        <a href="https://maps.app.goo.gl/z3QeBcSHQ7R7WzBV7" target="_blank" class="btn-rsvp" style="margin-top: 15px; font-size: 0.95rem;">Ver Ubicación en Mapa</a>
+    <section class="section section-burgundy" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px; padding: 60px 20px;">
+        <h2 class="header-title" style="font-size: 1.8rem; margin-bottom: 5px;">Dónde y Cuándo</h2>
+    
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+            <p style="font-size: 1.1rem; color: var(--accent-gold); text-transform: uppercase; letter-spacing: 1px;">Tiempo TBD</p>
+            <p style="font-size: 1.4rem; font-weight: 700; letter-spacing: 1px;">Lirios del Valle</p>
+            <p style="font-size: 1.1rem; opacity: 0.9;">Ejido Chiapas 1</p>
+        </div>
+
+        <a href="https://maps.app.goo.gl/z3QeBcSHQ7R7WzBV7" target="_blank" class="btn-rsvp" style="margin-top: 10px; font-size: 0.95rem;">Ver Ubicación en Mapa</a>
     </section>
 
     <!-- Countdown Script -->
